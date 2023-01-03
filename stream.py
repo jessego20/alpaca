@@ -24,7 +24,7 @@ def on_open(ws):
 
 def on_message(ws, message):
     print('received a message:')
-    print(message)
+    print(json.dumps(json.loads(message), indent=4))
 
 def on_close(ws):
     print('closed connection')
